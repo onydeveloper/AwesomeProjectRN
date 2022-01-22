@@ -5,19 +5,17 @@ const App = () => {
   return (
     <SafeAreaView>
       <View style={styles.container}>
-        <View style={styles.titleBox}>
-          <Text style={{color: 'black', fontWeight: 'bold'}}>Here are some boxes of different colors</Text>
-        </View>
-        <View style={styles.textBoxCyan}>
+        <Text style={styles.titleText}>Here are some boxes of different colors</Text>
+        <View style={[{backgroundColor: '#2aa198'},styles.textBox]}>
           <Text style={{color: 'white'}}>Cyan #2aa198</Text>
         </View>
-        <View style={styles.textBoxBlue}>
+        <View style={[{backgroundColor: '#268bd2'},styles.textBox]}>
           <Text style={{color: 'white'}}>Blue #268bd2</Text>
         </View>
-        <View style={styles.textBoxMagenta}>
+        <View style={[{backgroundColor: '#d33682'},styles.textBox]}>
           <Text style={{color: 'white'}}>Magenta #d33682</Text>
         </View>
-        <View style={styles.textBoxOrange}>
+        <View style={[{backgroundColor: '#cb4b16'},styles.textBox]}>
           <Text style={{color: 'white'}}>Orange #cb4b16</Text>
         </View>
       </View>
@@ -30,34 +28,15 @@ const styles = StyleSheet.create({
       marginHorizontal: 10,
       marginVertical: 20
     },
-    titleBox: {
-      color: 'black',
+    titleText: {
       fontWeight: 'bold',
       marginBottom: 10,
+      fontSize: 18
     },
-    textBoxCyan: {
-      backgroundColor: '#2aa198',
+    textBox: {
       alignItems: 'center',
       paddingVertical: 10,
-      marginBottom: 10
-    },
-    textBoxBlue: {
-      backgroundColor: '#268bd2',
-      alignItems: 'center',
-      paddingVertical: 10,
-      marginBottom: 10
-    },
-    textBoxMagenta: {
-      backgroundColor: '#d33682',
-      alignItems: 'center',
-      paddingVertical: 10,
-      marginBottom: 10
-    },
-    textBoxOrange: {
-      backgroundColor: '#cb4b16',
-      alignItems: 'center',
-      paddingVertical: 10,
-      marginBottom: 10
+      marginBottom: 10,
     }
   }
 )
